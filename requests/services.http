@@ -1,0 +1,29 @@
+
+###
+GET http://localhost:3000/api/tasks
+
+###
+GET http://localhost:3000/api/tasks?page=0&size=10
+
+###
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "s_id":"8",
+    "s_name":"Acompañamiento"
+}
+
+###
+GET http://localhost:3000/api/tasks/7
+
+###
+DELETE  http://localhost:3000/api/tasks/8
+
+###
+PUT http://localhost:3000/api/tasks/7
+Content-Type: application/json
+
+{
+    "s_name":"Venta de Bicicletas de Carreras"
+}
