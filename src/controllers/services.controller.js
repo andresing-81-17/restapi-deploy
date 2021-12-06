@@ -1,7 +1,7 @@
 import Services from "../models/Services";
 import { getPagination } from "../libs/getPagination";
 
-export const getFindAllServices = async (req, res) => {
+export const getFindAllServices = async (req, res) => {  
   try {
     const { size, page, name } = req.query;
 

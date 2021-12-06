@@ -19,6 +19,6 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to my aplication" });
 });
 
-app.use("/api/tasks", TasksRoutes);
+app.use("/api", TasksRoutes);
 
 export default app;

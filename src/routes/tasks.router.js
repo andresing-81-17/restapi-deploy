@@ -1,15 +1,18 @@
 import { Router } from "express";
 import * as servicesController from "../controllers/services.controller";
+import * as workshopController from "../controllers/workshop.controller";
 const router = Router();
 
-router.post("/", servicesController.postCreateServices);
+router.post("/services", servicesController.postCreateServices);
 
-router.get("/", servicesController.getFindAllServices);
+router.get("/services", servicesController.getFindAllServices);
 
-router.get("/:s_id", servicesController.getFindOneServices);
+router.get("/services/:s_id", servicesController.getFindOneServices);
 
-router.delete("/:s_id", servicesController.deleteServices);
+router.delete("/services/:s_id", servicesController.deleteServices);
 
-router.put("/:s_id", servicesController.updateServices);
+router.put("/services/:s_id", servicesController.updateServices);
+
+router.get("/workshops", workshopController.getFindAllWorkshop);
 
 export default router;

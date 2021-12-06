@@ -19,4 +19,4 @@ const servicesSchema = new Schema(
 );
 
 servicesSchema.plugin(mongoosePaginate);
-export default model("Services", servicesSchema);
+export default model("services", servicesSchema);

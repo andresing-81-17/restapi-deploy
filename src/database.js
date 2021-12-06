@@ -8,6 +8,7 @@ import config from "./config";
       useUnifiedTopology: true,
     });
     console.log("Database is connected to: ", db.connection.name);
+    console.log("Database is connected to: ", db.connection);
   } catch (error) {
     console.error(error);
   }

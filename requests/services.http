@@ -1,12 +1,15 @@
 
 ###
-GET http://localhost:3000/api/tasks
+GET http://localhost:3000/api/services
 
 ###
-GET http://localhost:3000/api/tasks?page=0&size=10
+GET http://localhost:3000/api/services?page=0&size=10
 
 ###
-POST http://localhost:3000/api/tasks
+http://geobike.xyz/api/services
+
+###
+POST http://localhost:3000/api/services
 Content-Type: application/json
 
 {
@@ -15,15 +18,18 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/api/tasks/7
+GET http://localhost:3000/api/services/7
 
 ###
-DELETE  http://localhost:3000/api/tasks/8
+DELETE  http://localhost:3000/api/services/8
 
 ###
-PUT http://localhost:3000/api/tasks/7
+PUT http://localhost:3000/api/services/7
 Content-Type: application/json
 
 {
     "s_name":"Venta de Bicicletas de Carreras"
 }
+
+###
+GET http://localhost:3000/api/workshops
