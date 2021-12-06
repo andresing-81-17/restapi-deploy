@@ -13,8 +13,8 @@ POST http://localhost:3000/api/services
 Content-Type: application/json
 
 {
-    "s_id":"8",
-    "s_name":"Acompañamiento"
+    "s_id":"9",
+    "s_name":"Llantas"
 }
 
 ###
@@ -31,5 +31,28 @@ Content-Type: application/json
     "s_name":"Venta de Bicicletas de Carreras"
 }
 
+
+###
+POST http://localhost:3000/api/workshops
+Content-Type: application/json
+
+{
+    "name":"Taller 3",
+    "address":"Direccion taller 3",
+    "latitude":"4.642964388958715",
+    "longitude":"-74.06687642753907",
+    "type":"2",
+    "status":"1"
+}
+
+
 ###
 GET http://localhost:3000/api/workshops
+
+###
+PUT http://localhost:3000/api/assignServices/61ae4d68e2fb0a8e5db5e682
+Content-Type: application/json
+
+{
+    "service":"61abdb223ec519f346187c55"
+}

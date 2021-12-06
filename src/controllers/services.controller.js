@@ -79,8 +79,7 @@ export const deleteServices = async (req, res) => {
   }
 };
 
-export const updateServices = async (req, res) => {
-  console.log(req);
+export const updateServices = async (req, res) => { 
   await Services.findOneAndUpdate(req.params, req.body);
   res.json({ message: "Sevices was updated Successfully" });
 };

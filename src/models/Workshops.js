@@ -1,36 +1,36 @@
 import { Schema, model } from "mongoose";
 import mongoosePaginate from "mongoose-paginate-v2";
+import mongooseAutopopulate from "mongoose-autopopulate";
 
 const workshopSchema = new Schema(
   {
-    w_id: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    w_name: {
+    name: {
       type: String,
       trim: true,
     },
-    w_address: {
+    address: {
       type: String,
       trim: true,
     },
-    w_latitude: {
+    latitude: {
       type: String,
       trim: true,
     },
-    w_longitude: {
+    longitude: {
       type: String,
       trim: true,
     },
-    w_status: {
+    type: {
       type: String,
       trim: true,
     },
-    w_quality: {
+    status: {
       type: String,
       trim: true,
+    },
+    services: {
+      type: Array,
+      ref: 'services'      
     },
   },
   {
@@ -38,5 +38,6 @@ const workshopSchema = new Schema(
   }
 );
 
+workshopSchema.plugin(mongooseAutopopulate);
 workshopSchema.plugin(mongoosePaginate);
 export default model("workshops", workshopSchema);

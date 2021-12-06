@@ -7,8 +7,7 @@ import config from "./config";
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Database is connected to: ", db.connection.name);
-    console.log("Database is connected to: ", db.connection);
+    console.log("Database is connected to: ", db.connection.name);    
   } catch (error) {
     console.error(error);
   }
