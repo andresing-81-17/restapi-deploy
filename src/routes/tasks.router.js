@@ -17,8 +17,6 @@ router.post("/workshops", workshopController.postCreateWorkshop);
 
 router.get("/workshops", workshopController.getFindAllWorkshop);
 
-router.put("/assignServices/:_id", workshopController.updateWorkshopServices);
-
 
 
 export default router;

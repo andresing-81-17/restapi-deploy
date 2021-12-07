@@ -14,6 +14,7 @@ export const getFindAllServices = async (req, res) => {
     const { limit, offset } = getPagination(page, size);
 
     const data = await Services.paginate(condition, { offset, limit });
+    console.log(data)
     res.json({
       totalItems: data.totalDocs,
       services: data.docs,

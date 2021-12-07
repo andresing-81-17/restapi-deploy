@@ -24,13 +24,12 @@ const workshopSchema = new Schema(
       type: String,
       trim: true,
     },
-    status: {
+    votos: {
       type: String,
       trim: true,
     },
     services: {
-      type: Array,
-      ref: 'services'      
+      type: Array  
     },
   },
   {
