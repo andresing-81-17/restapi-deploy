@@ -36,4 +36,28 @@ export const postCreateWorkshop = async (req, res) => {
   }
 };
 
+export const updateWorkshopVote = async (req, res) => {
+  
+  const filter = { id: req.params.id };
+  
+  const updateVote = await workshops.findOneAndUpdate(filter, req.body, {
+    new: true,
+    upsert: true,
+    rawResult: true
+  });
+  res.json(updateVote.value);
+};
 
+export const deleteWorkshop = async (req, res) => {
+  try {
+    await workshops.find(req.params).remove().exec();
+    res.json({
+      message: "La tienda se a eliminado corectamente",
+    });
+  } catch (error) {
+    res.status(500).json({
+      message:
+        error.message || `Cannot delete services withid ${req.params.s_id}`,
+    });
+  }
+};

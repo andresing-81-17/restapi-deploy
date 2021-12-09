@@ -4,6 +4,9 @@ import mongooseAutopopulate from "mongoose-autopopulate";
 
 const workshopSchema = new Schema(
   {
+    id: {
+      type:Number
+    },    
     name: {
       type: String,
       trim: true,
@@ -24,12 +27,12 @@ const workshopSchema = new Schema(
       type: String,
       trim: true,
     },
-    votos: {
+    votes: {
       type: String,
       trim: true,
     },
     services: {
-      type: Array  
+      type: Array,
     },
   },
   {

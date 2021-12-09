@@ -46,9 +46,28 @@ Content-Type: application/json
     "services":["Taller bicicletas gamma baja","Repuestos","Mantenimiento","Accesorios"]
 }
 
-
-
-
 ###
 GET http://localhost:3000/api/workshops
+
+###
+POST http://localhost:3000/api/uservotes
+Content-Type: application/json
+
+{
+    "workshopId": 1,
+    "userId": 1,
+    "vote":  1,
+    "typeVote":  1
+}
+
+###
+PUT http://localhost:3000/api/workshopvote/1
+Content-Type: application/json
+
+{
+    "votes": null
+}
+
+###
+DELETE http://localhost:3000/api/workshops/5
 
