@@ -28,7 +28,7 @@ const workshopSchema = new Schema(
       trim: true,
     },
     votes: {
-      type: String,
+      type: Number,
       trim: true,
     },
     services: {

@@ -24,7 +24,7 @@ export const postCreateWorkshop = async (req, res) => {
       latitude: req.body.latitude,
       longitude: req.body.longitude,
       type: req.body.type,
-      votos: req.body.votos,
+      votes: req.body.votes,
       services: req.body.services,
     });
     const workshopSave = await newWorkshop.save();
